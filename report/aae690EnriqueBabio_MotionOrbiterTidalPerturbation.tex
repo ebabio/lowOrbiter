@@ -1,0 +1,67 @@
+\documentclass[journal]{new-aiaa}
+%\documentclass[conf]{new-aiaa} for conference papers
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{longtable,tabularx}
+\setlength\LTleft{0pt}
+
+\usepackage{amsmath}	% allows unnumbered equations with equation*
+\usepackage{amssymb}	%% allows math logical symbols
+\usepackage{graphicx}	% allows for graphics numbering
+
+% Included by the user
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{float}		% allows to use [H] float, stricter version of [h]
+\usepackage{matlab-prettifier}
+
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
+{
+	\fancyhf{}
+	\chead{Enrique Babio - Motion of an Orbiter under Tidal Perturbation}
+	\cfoot{\thepage}
+}
+\fancypagestyle{fancyfirst}
+{
+	\fancyhf{}
+	\chead{Enrique Babio}
+	\cfoot{\thepage}
+}
+
+\title{Motion of an Orbiter under Tidal Perturbation}
+\author{ }
+
+\begin{document}
+
+\maketitle
+
+\thispagestyle{fancyfirst}
+\afterpage{\thispagestyle{fancy}}
+
+\input{textfiles/abstract}
+
+\input{textfiles/introduction}
+
+\input{textfiles/definition}
+
+\input{textfiles/analysis}
+
+\input{textfiles/results}
+
+\input{textfiles/conclusion}
+
+\bibliography{aae690biblio}
+
+\newpage
+\appendix
+\section*{Appendices}
+
+\input{textfiles/appendixMath}
+\input{textfiles/appendixCode}
+\end{document}
