@@ -20,6 +20,8 @@
 \usepackage{float}		% allows to use [H] float, stricter version of [h]
 \usepackage{matlab-prettifier}
 
+\newcommand{\comment}[1]{}  %comment not showed for ToDos
+
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
 {
@@ -58,10 +60,9 @@
 
 \bibliography{aae690biblio}
 
-\newpage
 \appendix
 \section*{Appendices}
 
-\input{textfiles/appendixMath}
+%\input{textfiles/appendixMath}
 \input{textfiles/appendixCode}
 \end{document}
