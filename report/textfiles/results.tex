@@ -1,11 +1,11 @@
 \section{Results}
 
-We now consider the motion of an orbiter about Europa which is orbiting Jupiter at the same time. The parameters for this environment have been obtained from JPL SSD database \cite{jplssd} for the parameters pertaining the 2-body motion and Schubert \cite{schubert2004interior} for the radius of Europa and the $J_2$ coefficient. A especial perturbations approach was implemented that numerically integrates equations \ref{eomX}-\ref{eomZ}, details can be found on Annex \ref{annexCode}.
+We now consider the motion of an orbiter about Europa, which is orbiting Jupiter at the same time. The parameters for this environment have been obtained from JPL SSD database \cite{jplssd} for the parameters pertaining the 2-body motion and Schubert \cite{schubert2004interior} for the radius of Europa and the $J_2$ coefficient. A especial perturbations approach was implemented that numerically integrates equations \ref{eomX}-\ref{eomZ}, details can be found on Annex \ref{annexCode}.
 
 For reference on the non-dimensional units, the period of the orbit of Europa about Jupiter is $3.55$ days, the non-dimensional distance is $19.6 \times 10^3$ km and the radius of the satellite is $1565$ km. In non-dimensional units, its radius is close to $.08$ and an an altitude of $200$km is about $0.01$ units.
 
 \subsection{Stable case results}
-As a first validation of the theory, we start by comparing the motion for the stable case. We consider an orbiter around Europa with an eccentricity of 0.1 and an altitude of $400$ km, ($a=0.1$) and an null initial argument of periapsis. This scenario corresponds to $\chi = .2746, \alpha = 3.4080$ used for the phase plane in the stable case. We perform an integration for long enough for the eccentricity to complete one revolution and we compare it with the analytical results in figure \ref{fig:stableEccentricityComparison}.
+As a first validation of the theory, we start by comparing the motion for the stable case. We consider an orbiter around Europa with an eccentricity of 0.1 and an altitude of $400$ km, ($a=0.1$). This scenario corresponds to $\chi = .2746, \alpha = 3.4080$ used for the phase plane in the stable case. We perform an integration for long enough for the eccentricity to complete one revolution and we compare it with the analytical results in figure \ref{fig:stableEccentricityComparison}.
 
 \begin{figure}[H]
 	\centering
@@ -32,11 +32,11 @@ This is the case of high inclination orbits which is of greatest interest to the
 e_f = 1-\frac{r_{sat}}{a}
 \end{equation}
 
-From the analytic theory, we know this will be achieved if we start in a circular orbit or if we start in the attractive manifold. From a mission design perspective, the latter would be more interesting since we would first have to arrive to the circular orbit anyway. Thus, the initial condition can be chosen on the attractive manifold, the injection into the satellite should be made in a way that the elliptic orbit has the right argument of periapsis, this the approach followed in JUICE \cite{esa2011juice}.
+From the analytic theory, we know time to impact will be maximized if we start in a circular orbit or if we start in the attractive manifold. From a mission design perspective, the latter would be more interesting since we would first have to arrive to the circular orbit anyway. Thus, the initial condition can be chosen on the attractive manifold, the injection into the satellite should be made in a way that the elliptic orbit has the right argument of periapsis, this the approach followed in JUICE \cite{esa2014juice}.
 
 This behavior is showcased with an orbiter around Europa with an initial eccentricity of 0.1 and an altitude of $200$ km, ($a=0.09$) which is close to impact and an initial argument of periapsis such that the satellite is on the attractive manifold. This scenario corresponds to $\chi = 0.4650, \alpha = 0.1287$ used for the phase plane in the unstable case. We perform an integration for long enough for the eccentricity to increase and cause an impact the surface. In the case of the averaged analytical theory, if the initial conditions are chosen exactly on the manifold then the trajectory is convergent to the equilibrium, instead a perturbation equal to the observed short term oscillations in the eccentricity is introduced.
 
-The impact condition happens when the eccentricity reaches $0.1178$. The results between match closely, the non dimensional time to impact in the averaged model is $115$ units, and $117$ for the numeric integration, an error below $1\%$ , also the motion of the eccentricity vector matches well the motion of the analytic model as shown in figure \ref{fig:unstableEccentricityComparison}. 
+The impact condition happens when the eccentricity reaches $0.1178$. The results match closely, the non dimensional time to impact in the averaged model is $115$ units, and $117$ for the numeric integration, an error below $1\%$ , also the motion of the eccentricity vector matches well the motion of the analytic model as shown in figure \ref{fig:unstableEccentricityComparison}. 
 
 \begin{figure}[H]
 	\centering
@@ -46,7 +46,7 @@ The impact condition happens when the eccentricity reaches $0.1178$. The results
 	\label{fig:unstableEccentricityComparison}
 \end{figure}
 
-We also observe that the other elements behave as expected: the semi-major axis and inclination remain constant as shown in figure \ref{fig:elementsUnstable}.
+We also observe that the other elements behave as expected: the mena semi-major axis and mean inclination remain constant to a first order as shown in figure \ref{fig:elementsUnstable}.
 
 \begin{figure}[H]
 	\centering
@@ -56,23 +56,23 @@ We also observe that the other elements behave as expected: the semi-major axis 
 	\label{fig:elementsUnstable}
 \end{figure}
 
-We note initial conditions were chosen to be on the envelope of the short terms oscillations for the analytical model and provide a good fit. This reinforces the idea that the short term perturbations excite the unstable modes and limit the lifetime of the satellite. Another source for this error could be the that the mean argument of the periapsis is not exactly on the attractive manifold due to short term perturbations. For a closer analysis of this effect, it would necessary to find the expressions for the short term perturbations in terms of the anomaly of the orbit and the latitude of the ascending node. This could lead to better choices of the initial conditions that increase the lifetime. The last test will on this.
+We note initial conditions were chosen to be on the envelope of the short terms oscillations for the analytical model and provide a good fit. This reinforces the idea that the short term perturbations excite the unstable modes and limit the lifetime of the satellite. Another source for this error could be the that the mean argument of the periapsis is not exactly on the attractive manifold due to short term perturbations. For a closer analysis of this effect, it would necessary to find the expressions for the short term perturbations in terms of the anomaly of the orbit and the latitude of the ascending node. This could lead to better choices of the initial conditions that increase the lifetime. The last test will give more insight on this.
 
 \subsection{Application to higher altitude orbits: JUICE mission profiles}
 
-As a final test, we change the scenario to that of JUICE orbiting Ganymede. In \cite{esa2011juice} the mission altitude profile for the beginning of the orbit is given. This consists on an elliptical injection into a $200\times10000$ km altitude orbit in the stable manifold that will circularize the orbit, the circular orbit is maintained by means of the AOCS system and finally the orbit evolves into a $200\times 10000$ altitude orbit. In non-dimensional units the semi-major axis of the orbit is $a\approx.167$ and the $200$ km altitude is $ r \approx 0.062$. With these conditions the eccentricity is $e \approx .63$. These clearly violate the assumptions of small eccentricity introduced for the development of the theory.
+As a final test, we change the scenario to that of JUICE, considering an orbiter about Ganymede. In \cite{esa2011juice} the mission altitude profile for the beginning of the orbit is given. This consists on an elliptical injection into a $200\times10000$ km altitude orbit in the stable manifold that will circularize the orbit, the circular orbit is maintained by means of the AOCS system and finally the orbit evolves into a $200\times 10000$ altitude orbit. In non-dimensional units the semi-major axis of the orbit is $a\approx.167$ and the $200$ km altitude is $ r \approx 0.062$. With these conditions the eccentricity is $e \approx .63$. These clearly violate the assumptions of small eccentricity introduced for the development of the theory.
 
-We obtain the attractive and unstable globalized manifolds by integrating for negative and positive time respectively from a purely circular orbit until the maximum eccentricity is obtained. The mission profile shown in figure \ref{fig:missionProfile}resembles that of ESA to a large extent, if we remove the periodic bits where the AOCS is assumed to be acting, the natural evolution of the orbit is about 90 days.
+We obtain the attractive and unstable globalized manifolds by integrating for negative and positive time respectively from a purely circular orbit until the maximum eccentricity is obtained. The mission profile shown in figure \ref{fig:missionProfile} resembles that of ESA to a large extent, if we remove the parts where the AOCS is assumed to be acting \cite{esa2014juice}, the natural evolution of the orbit is about 90 days.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=3in]
 	{figures/GanymedeESA/missionProfile.png}
-	\caption{Altitude profile for JUICE mission from orbit injection to first major maneuver from our model. Reproducing to ESA \cite{esa2011juice}, figure 7-8}
+	\caption{Altitude profile for JUICE mission from orbit injection to first major maneuver from our model. Reproducing the profile in ESA \cite{esa2011juice}, figure 7-8}
 	\label{fig:missionProfile}
 \end{figure}
 
-In order assess the accuracy of the theory for greater eccentricities, we compare two things: the differences in the phase plane of the eccentricity and differences in the time evolution of the system. In the phase plane we know that for small eccentricities the argument of periapsis for the manifolds is constant, but as we globalize for greater eccentricities this doesn't have to hold. In figure \ref{fig:eccentricityComparisonGlobal} this is done for one trajectory, we observe that the argument of periapsis for the manifolds starts to drift slowly but being sufficiently close, but the short term perturbation increase with eccentricity, as can be expected from our small eccentricity assumption. 
+In order assess to the accuracy of the theory for greater eccentricities, we compare two things: the differences in the phase plane of the eccentricity and differences in the time evolution of the system. In the phase plane we know that for small eccentricities the argument of periapsis for the manifolds is constant, but as we globalize for greater eccentricities this doesn't have to hold. In figure \ref{fig:eccentricityComparisonGlobal} this is done for one trajectory, we observe that the argument of periapsis for the manifolds starts to drift away slowly from the linear theory though reasonably close, but the short term perturbations increase with eccentricity, as can be expected from our small eccentricity assumption. 
 
 \begin{figure}[H]
 	\centering
@@ -82,7 +82,7 @@ In order assess the accuracy of the theory for greater eccentricities, we compar
 	\label{fig:eccentricityComparisonGlobal}
 \end{figure}
 
-Even if a phase portrait is similar, there may be important differences in the rates of convergence and divergence as the manifolds are globalized. To asses this, we compare the time evolution of the altitude profile obtained from the numerical integration with the eccentricity predicted by the first-order theory. We compare the evolution of the profile for the first 40 days of the mission, when it is converging to the circular orbit. Figure \ref{fig:missionProfileTheoretical} shows that the difference is small, meaning that the time evolution doesn't change greatly.
+Even if a phase portrait is similar, there may be important differences in the rates of convergence and divergence as the manifolds are globalized. To asses this, we compare the time evolution of the altitude profile obtained from the numerical integration with the eccentricity predicted by the first-order theory. We compare the evolution of the profile for the first 40 days of the mission, when it is converging to the circular orbit and assume the mean argument the argument of periapsis stays constant. Figure \ref{fig:missionProfileTheoretical} shows that the difference is small, meaning that the time evolution is not different to a large extent.
 
 \begin{figure}[H]
 	\centering
@@ -92,7 +92,7 @@ Even if a phase portrait is similar, there may be important differences in the r
 	\label{fig:missionProfileTheoretical}
 \end{figure}
 
-Overall, we can state that the insight the developed analytical theory still applies for higher eccentricity orbits. However, the difference in the time to impact between initial conditions chosen a priori and those obtained from globalizing the manifolds has increased significantly. Meaning that especial perturbation methods become increasingly more accurate and necessary for mission design. Figure \ref{fig:JUICEorbit} shows the orbit in a non-rotating frame where the changes in the eccentricity vector can be appreciated.
+Overall, we can state that the insight the developed analytical theory still applies for higher eccentricity orbits. However, the difference in the time to impact between initial conditions chosen a priori and those obtained from globalizing the manifolds has increased significantly. Meaning that especial perturbation methods become increasingly more accurate and necessary for mission design. Figure \ref{fig:JUICEorbit} shows the orbit in a non-rotating frame where the changes in the eccentricity vector can be clearly appreciated.
 
 \begin{figure}[H]
 	\centering

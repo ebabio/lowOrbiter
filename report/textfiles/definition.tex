@@ -12,7 +12,7 @@ The tidal force of the planet is modeled following Hill's approximation to the T
 	\label{fig:vectorDiagram}
 \end{figure}
 
-To simplify and generalize the outcome of the analysis we non-dimensionalize the problem. For this we choose a characteristic time and distance as the inverse of the angular velocity of the satellite and the radius that would achieve the unperturbed resonant orbit around the satellite respectively:
+To simplify and generalize the outcome of the analysis we non-dimensionalize the problem. For this we choose the characteristic time as the inverse of the angular velocity of the satellite, and the distance as radius that would achieve the unperturbed resonant orbit around the satellite:
 \begin{align}
 n_s &= \sqrt{\frac{\mu_p}{r_s^3}} = \sqrt{\frac{\mu_s}{r_{res}^3}} \qquad && \text{non-dimensional inverse time} \\
 r_{res} &= \left(\frac{\mu_s}{n_s^2}\right)^{1/3} && \text{non-dimensional distance} 
@@ -29,9 +29,9 @@ We denote position of the orbiter about the satellite as $\vec{r} = x \hat{u}_x 
 \end{equation}
 
 \subsection{Oblateness perturbation}
-When considering the perturbation due to the non-sphericity of the satellite, we start by considering the motion of the satellite about the planet. We assume the satellite is tidally locked to the planet: it is static with respect to the synchronous rotating frame with the minor axis of inertia in oriented along the $x$ axis and the major axis of inertia oriented along the $z$ axis \cite{paskowitz2006design}. If we consider the satellite to be an ellipsoid, this would give place to the second order harmonics with $J_{21}$ vanishing due to the choice of reference frame. Also, we consider the mean motion of the orbiter to be non-commensurate with the mean motion of the satellite, we can disregard the effects the $J_{22}$ harmonic, or as shown in \cite{paskowitz2006design} by averaging about one revolution to the central planet.
+When considering the perturbation due to the non-sphericity of the satellite, we start by considering the motion of the satellite about the planet. We assume the satellite is tidally locked to the planet: it is static with respect to the synchronous rotating frame with the minor axis of inertia in oriented along the $x$ axis and the major axis of inertia oriented along the $z$ axis \cite{paskowitz2006design}. If we consider the satellite to be an ellipsoid, this would give place to the second order harmonics that would be time independent thanks to the choice of the rotating frame. Also, we consider the mean motion of the orbiter to be non-commensurate with the mean motion of the satellite, we can disregard the effects of the $J_{21},J_{22}$ harmonics since they will vanish after averaging about one revolution to the central planet as shown in \cite{paskowitz2006design}.
 
-Thus in this first approach, we only consider the $J_2$ an disregard higher order harmonics. The perturbation is function found in \cite{longuskiaae690} in terms of the satellite latitude angle $\phi$ and the semimajor axis and force:
+Thus in this first approach, we only consider the $J_2$ an disregard higher order harmonics. The perturbation is function found in the notes \cite{longuskiaae690} in terms of the satellite latitude angle $\phi$ and the semimajor axis and force:
 \begin{equation}
 \mathcal{R}_2 = -\frac{\mu_s}{r^3} J_2 P_2\left(\sin \phi\right) = \frac{J_2}{2} \frac{1}{r^3} \left(1 - 3 \frac{z^2}{r^2}\right)
 \end{equation}
@@ -54,7 +54,7 @@ Obtaining the EOMs for the system:
 \label{eomY}
 \ddot{y} &= -2 \dot{x} \	&-\frac{1}{r^3} y \	& 		&- \frac{J_2 }{2} \frac{1}{r^5} \left(3 - 15 \frac{z^2}{r^2}\right) y\\
 \label{eomZ}
-\ddot{z} &= 				&-\frac{1}{r^3} y \	&- z \	&- \frac{J_2 }{2} \frac{1}{r^5} \left(9 - 15 \frac{z^2}{r^2}\right) z
+\ddot{z} &= 				&-\frac{1}{r^3} z \	&- z \	&- \frac{J_2 }{2} \frac{1}{r^5} \left(9 - 15 \frac{z^2}{r^2}\right) z
 \end{alignat}
 
 The Hill problem is conservative with a constant of the motion similar to the Jacobi constant for the RC3BP. Since our modified Hill problem has only a change in the potential function it is also conservative. The conserved Jacobi-like constant is:
@@ -62,4 +62,4 @@ The Hill problem is conservative with a constant of the motion similar to the Ja
 C = (x^2 + y^2) + 2U = -z^2+ 3 x^2 + \frac{2}{r} + \frac{J_2}{r^3} \left(1 - 3 \frac{z^2}{r^2}\right) - (\dot{x}^2 + \dot{y}^2 + \dot{z}^2)
 \end{equation}
 
-Hill's problem has libration points at $x= \pm \left(\frac{1}{3}\right)^{1/3} \approx 0.69$. While the libration points for our problem are not the same, since we are considering a slightly perturbed problem, we still can use the libration points as reference for the semimajor axis for the orbiter. They smaller to minimize the effect of strong perturbation from the perturbing planet.
+Hill's problem has libration points at $x= \pm \left(\frac{1}{3}\right)^{1/3} \approx 0.69$. While the libration points for our problem are not the same, since we are considering a slightly perturbed problem, we still can use the libration points as reference for the semimajor axis for the orbiter. It should be smaller to minimize the effect of strong perturbation from the perturbing planet and allow the orbit to change slowly.
